@@ -42,7 +42,7 @@
       </div>
 
       <div class="moduleDocstring">
-        <div class="undocumented">Undocumented</div>
+        <div><p>Highlevel scripting API, requires xautomation to be installed</p></div>
       </div>
 
       <div id="splitTables">
@@ -52,62 +52,62 @@
     
     <td>Class</td>
     <td><a href="scripting.highlevel.PatternNotFound.html" class="code" data-type="Class">PatternNotFound</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Exception raised by functions</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
     <td><a href="scripting.highlevel.html#LEFT" class="code" data-type="Variable">LEFT</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Left mouse button</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
     <td><a href="scripting.highlevel.html#MIDDLE" class="code" data-type="Variable">MIDDLE</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Middle mouse button</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
     <td><a href="scripting.highlevel.html#RIGHT" class="code" data-type="Variable">RIGHT</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Right mouse button</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#visgrep" class="code" data-type="Function">visgrep</a></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><span>Usage: <code>visgrep(scr: str, pat: str, tolerance: int = 0) -&gt; int</code></span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#get_png_dim" class="code" data-type="Function">get_png_dim</a></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><span>Usage: <code>get_png_dim(filepath:str) -&gt; (int)</code></span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#mouse_move" class="code" data-type="Function">mouse_move</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Moves the mouse using xte <code>mousemove</code> from xautomation</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#mouse_rmove" class="code" data-type="Function">mouse_rmove</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Moves the mouse using xte <code>mousermove</code> command from xautomation</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#mouse_click" class="code" data-type="Function">mouse_click</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Clicks the mouse in the current location using xte <code>mouseclick</code> from xautomation</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#mouse_pos" class="code" data-type="Function">mouse_pos</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Returns the current location of the mouse.</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#click_on_pat" class="code" data-type="Function">click_on_pat</a></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><span>Requires <code>imagemagick</code>, <code>xautomation</code>, <code>xwd</code>.</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><a href="scripting.highlevel.html#move_to_pat" class="code" data-type="Function">move_to_pat</a></td>
-    <td><span>See help for click_on_pat</span></td>
+    <td><span>See <a href="scripting.highlevel.html#click_on_pat"><code>click_on_pat</code></a></span></td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -134,7 +134,7 @@
     LEFT =
   </div>
   <div class="functionBody">
-    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+    <div><p>Left mouse button</p></div> (type: <code>int</code>)
   </div>
 </div><div class="basevariable">
   
@@ -148,7 +148,7 @@
     MIDDLE =
   </div>
   <div class="functionBody">
-    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+    <div><p>Middle mouse button</p></div> (type: <code>int</code>)
   </div>
 </div><div class="basevariable">
   
@@ -162,7 +162,7 @@
     RIGHT =
   </div>
   <div class="functionBody">
-    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+    <div><p>Right mouse button</p></div> (type: <code>int</code>)
   </div>
 </div><div class="basefunction">
   
@@ -181,7 +181,7 @@
   <div class="docstring functionBody">
     
     
-    <div><p>visgrep(scr: str, pat: str, tolerance: int = 0) -&gt; int Visual grep of scr for pattern pat. Requires xautomation (http://hoopajoo.net/projects/xautomation.html). visgrep("screen.png", "pat.png") Exceptions raised: ValueError, PatternNotFound, FileNotFoundError</p><p>:param scr: path of PNG image to be grepped. :param pat: path of pattern image (PNG) to look for in scr. :param tolerance: An integer ≥ 0 to specify the level of tolerance for 'fuzzy' matches. If negative or not convertible to int, raises ValueError. :returns: coordinates of the topleft point of the match, if any. Raises PatternNotFound exception otherwise.</p></div>
+    <div><p>Usage: <code>visgrep(scr: str, pat: str, tolerance: int = 0) -&gt; int</code></p><p>Visual grep of scr for pattern pat.</p><p>Requires xautomation (http://hoopajoo.net/projects/xautomation.html).</p><p>Usage: <code>visgrep("screen.png", "pat.png")</code></p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">scr</td><td>path of PNG image to be grepped.</td></tr><tr><td></td><td class="fieldArg">pat</td><td>path of pattern image (PNG) to look for in scr.</td></tr><tr><td></td><td class="fieldArg">tolerance</td><td>An integer ≥ 0 to specify the level of tolerance for 'fuzzy' matches.</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">Coordinates of the topleft point of the match, if any. Raises <a href="scripting.highlevel.PatternNotFound.html"><code>PatternNotFound</code></a> exception otherwise.</td></tr><tr class="fieldStart"><td class="fieldName">Raises</td><td class="fieldArg">ValueError</td><td>Raised if tolerance is negative or not convertable to int</td></tr><tr><td></td><td class="fieldArg">PatternNotFound</td><td>Raised if <code>pat</code> not found.</td></tr><tr><td></td><td class="fieldArg">FileNotFoundError</td><td>Raised if either file is not found</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -200,7 +200,7 @@
   <div class="docstring functionBody">
     
     
-    <div><p>get_png_dim(filepath:str) -&gt; (int) Finds the dimension of a PNG. :param filepath: file path of the PNG. :returns: (width, height).</p></div>
+    <div><p>Usage: <code>get_png_dim(filepath:str) -&gt; (int)</code></p><p>Finds the dimension of a PNG.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">filepath</td><td>file path of the PNG.</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">(width, height).</td></tr><tr class="fieldStart"><td class="fieldName">Raises</td><td class="fieldArg">Exception</td><td>Raised if the file is not a png</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -219,7 +219,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Moves the mouse using xte <code>mousemove</code> from xautomation</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>x location to move the mouse to</td></tr><tr><td></td><td class="fieldArg">y</td><td>y location to move the mouse to</td></tr><tr><td></td><td class="fieldArg">display</td><td>X display to pass to <code>xte</code></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -238,7 +238,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Moves the mouse using xte <code>mousermove</code> command from xautomation</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">x</td><td>x location to move the mouse to</td></tr><tr><td></td><td class="fieldArg">y</td><td>y location to move the mouse to</td></tr><tr><td></td><td class="fieldArg">display</td><td>X display to pass to <code>xte</code></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -257,7 +257,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Clicks the mouse in the current location using xte <code>mouseclick</code> from xautomation</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">button</td><td>Which button signal to send from the mouse</td></tr><tr><td></td><td class="fieldArg">display</td><td>X display to pass to <code>xte</code></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -276,7 +276,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Returns the current location of the mouse.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">Returns the mouse location in a <code>list</code></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -295,7 +295,7 @@
   <div class="docstring functionBody">
     
     
-    <div><p>Requires imagemagick, xautomation, xwd. Click on a pattern at a specified offset (x,y) in percent of the pattern dimension. x is the horizontal distance from the top left corner, y is the vertical distance from the top left corner. By default, the offset is (50,50), which means that the center of the pattern will be clicked at. Exception PatternNotFound is raised when the pattern is not found on the screen. :param pat: path of pattern image (PNG) to click on. :param mousebutton: mouse button number used for the click :param offset: offset from the top left point of the match. (float,float) :param tolerance: An integer ≥ 0 to specify the level of tolerance for 'fuzzy' matches. If negative or not convertible to int, raises ValueError. :param restore_pos: return to the initial mouse position after the click.</p></div>
+    <div><p>Requires <code>imagemagick</code>, <code>xautomation</code>, <code>xwd</code>.</p><p>Click on a pattern at a specified offset (x,y) in percent of the pattern dimension. x is the horizontal distance from the top left corner, y is the vertical distance from the top left corner. By default, the offset is (50,50), which means that the center of the pattern will be clicked at.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">pat</td><td>path of pattern image (PNG) to click on.</td></tr><tr><td></td><td class="fieldArg">mousebutton</td><td>mouse button number used for the click</td></tr><tr><td></td><td class="fieldArg">offset</td><td>offset from the top left point of the match. (float,float)</td></tr><tr><td></td><td class="fieldArg">tolerance</td><td>An integer ≥ 0 to specify the level of tolerance for 'fuzzy' matches. If negative or not convertible to int, raises ValueError.</td></tr><tr><td></td><td class="fieldArg">restore_pos</td><td>return to the initial mouse position after the click.</td></tr><tr class="fieldStart"><td class="fieldName">Raises</td><td colspan="2"><a href="scripting.highlevel.PatternNotFound.html"><code>PatternNotFound</code></a>: Raised when the pattern is not found on the screen</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -314,7 +314,7 @@
   <div class="docstring functionBody">
     
     
-    <div><p>See help for click_on_pat</p></div>
+    <div><p>See <a href="scripting.highlevel.html#click_on_pat"><code>click_on_pat</code></a></p></div>
   </div>
 </div><div class="basefunction">
   
@@ -339,7 +339,7 @@
 
       </div>
       <address>
-        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-03 23:10:21.
+        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-10 17:36:36.
       </address>
 
     </div>

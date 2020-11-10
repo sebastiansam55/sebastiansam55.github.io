@@ -52,17 +52,27 @@
     
     <td>Method</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#__init__" class="code" data-type="Method">__init__</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Initialize the Qt version of the Clipboard</span></td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#clipBoard" class="code" data-type="Instance Variable">clipBoard</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Refers to the Qt clipboard object</span></td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#app" class="code" data-type="Instance Variable">app</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Refers to the application instance</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.clipboard_qt.QtClipboard.html#text" class="code" data-type="Instance Variable">text</a></td>
+    <td><span>Used to temporarily store the value of the selection or clipboard</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="scripting.clipboard_qt.QtClipboard.html#sem" class="code" data-type="Instance Variable">sem</a></td>
+    <td><span>Qt semaphore object used for asynchronous method execution</span></td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -73,11 +83,6 @@
     <td>Method</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#get_selection" class="code" data-type="Method">get_selection</a></td>
     <td><span>Read text from the X selection</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
-    <td><a href="scripting.clipboard_qt.QtClipboard.html#text" class="code" data-type="Instance Variable">text</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -88,16 +93,11 @@
     <td>Method</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#get_clipboard" class="code" data-type="Method">get_clipboard</a></td>
     <td><span>Read text from the clipboard</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
-    <td><a href="scripting.clipboard_qt.QtClipboard.html#sem" class="code" data-type="Instance Variable">sem</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="method private">
     
     <td>Method</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#__fillSelection" class="code" data-type="Method">__fillSelection</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Backend for the <code>fill_selection</code> method</span></td>
   </tr><tr class="method private">
     
     <td>Method</td>
@@ -112,12 +112,12 @@
     
     <td>Method</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#__getClipboard" class="code" data-type="Method">__getClipboard</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Backend for the <code>get_clipboard</code> method</span></td>
   </tr><tr class="method private">
     
     <td>Method</td>
     <td><a href="scripting.clipboard_qt.QtClipboard.html#__execAsync" class="code" data-type="Method">__execAsync</a></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span>Backend to execute methods asynchronously in Qt</span></td>
   </tr>
 </table>
         
@@ -144,7 +144,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Initialize the Qt version of the Clipboard</p><p>Usage: Called when QtClipboard is imported.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">app</td><td>refers to the application instance</td></tr></table></div>
   </div>
 </div><div class="baseinstancevariable">
   
@@ -158,7 +158,7 @@
     clipBoard =
   </div>
   <div class="functionBody">
-    <div class="undocumented">Undocumented</div>
+    <div><p>Refers to the Qt clipboard object</p></div>
   </div>
 </div><div class="baseinstancevariable">
   
@@ -172,7 +172,35 @@
     app =
   </div>
   <div class="functionBody">
-    <div class="undocumented">Undocumented</div>
+    <div><p>Refers to the application instance</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.clipboard_qt.QtClipboard.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    text =
+  </div>
+  <div class="functionBody">
+    <div><p>Used to temporarily store the value of the selection or clipboard</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="scripting.clipboard_qt.QtClipboard.sem">
+    
+  </a>
+  <a name="sem">
+    
+  </a>
+  <div class="functionHeader">
+    sem =
+  </div>
+  <div class="functionBody">
+    <div><p>Qt semaphore object used for asynchronous method execution</p></div>
   </div>
 </div><div class="basemethod">
   
@@ -210,7 +238,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Backend for the <code>fill_selection</code> method</p><p>Sets the selection text to the <code>string</code> value</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">string</td><td>Value to change the selection to</td></tr></table></div>
   </div>
 </div><div class="basemethod">
   
@@ -248,20 +276,6 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
-  </div>
-</div><div class="baseinstancevariable">
-  
-  <a name="scripting.clipboard_qt.QtClipboard.text">
-    
-  </a>
-  <a name="text">
-    
-  </a>
-  <div class="functionHeader">
-    text =
-  </div>
-  <div class="functionBody">
     <div class="undocumented">Undocumented</div>
   </div>
 </div><div class="basemethod">
@@ -338,7 +352,7 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
+    <div><p>Backend for the <code>get_clipboard</code> method</p><p>Stores the value of the clipboard into the <code>self.text</code> variable</p></div>
   </div>
 </div><div class="basemethod private">
   
@@ -357,27 +371,13 @@
   <div class="docstring functionBody">
     
     
-    <div class="undocumented">Undocumented</div>
-  </div>
-</div><div class="baseinstancevariable">
-  
-  <a name="scripting.clipboard_qt.QtClipboard.sem">
-    
-  </a>
-  <a name="sem">
-    
-  </a>
-  <div class="functionHeader">
-    sem =
-  </div>
-  <div class="functionBody">
-    <div class="undocumented">Undocumented</div>
+    <div><p>Backend to execute methods asynchronously in Qt</p></div>
   </div>
 </div>
 
       </div>
       <address>
-        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-03 23:10:21.
+        <a href="index.html">API Documentation</a> for scripting, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-11-10 17:36:36.
       </address>
 
     </div>
