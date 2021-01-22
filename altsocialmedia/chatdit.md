@@ -150,7 +150,11 @@ In addition every page has a banner at the top of the page that tells you that y
 ![newupdates](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/newupdates.png)
 </div>
 
-At the bottom of each page there are two images supposedly linking to the iPhone and android app store respectively. Both of these images link you back to the main ChatDit.com page. As far as I can tell there is zero evidence of any app existing for ChatDit as of now. I did find one archived Github [ChatDit App Repo](https://github.com/vivekkadu/ChatDit) with one commit in it titled "ChatDit"<sup>[](#links)</sup> that had the starting files for both iPhone and Android apps, but no evidence other than the name that they are related.
+At the bottom of each page there are two images supposedly linking to the iPhone and android app store respectively.Both of these images link you back to the main ChatDit.com page. As far as I can tell there is zero evidence of any app existing for ChatDit as of now. I did find one archived Github [ChatDit App Repo](https://github.com/vivekkadu/ChatDit) with one commit in it titled "ChatDit"<sup>[](#links)</sup> that had the starting files for both iPhone and Android apps, but no evidence other than the name that they are related.
+
+<div class="bordered">
+![appstorelinks](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/appstores.png)
+</div>
 
 One truly revealing detail about the website is that the "#BetaTesting" tag has been trending every day that I have been on the website. However there seems to have been no change to the numbers of position of the tags since I have started tracking them.
 
