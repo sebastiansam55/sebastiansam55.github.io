@@ -22,7 +22,7 @@
 <h2 id="deep-dive-chatdit">Deep Dive: ChatDit</h2>
 <p><a href="https://chatdit.com">ChatDit</a> is a social media website created by the dynamic duo of Diamond and Silk in 2018 as a response to their removal from the Facebook recommendation algorithm for being deemed “unsafe to the community” <sup><a href="#links">1</a></sup>.</p>
 <p>The tag line of the site is a overly long and very passive aggressive reference to their personal experience of deplatforming from social media;</p>
-<div class="center">
+<div class="center bordered">
 <p><strong>“Build your Business, Keep your Business. Build your Platform as long as you are following the policies.”</strong></p>
 <p><strong>“You have freedom of speech, not freedom to hate.”</strong></p>
 <p><strong>“ChatDit is offering you more than just a Conversation. It’s a way to build a business.”</strong></p>
@@ -51,13 +51,25 @@
 <p>The Diamond and Silk group was the largest that I came across plugging in terms for the group search. With only ~1300 members the group function is even more sparse than other parts of the site.</p>
 <h2 id="chatd-it-llc-terms-of-service">CHATD IT, LLC Terms of Service</h2>
 <p>The ChatDit Terms of Service lays out a number of interesting points about the website.</p>
-<p>The first thing I want to note is that there appears to be a typo in the header. It lists the title as <img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatdittos.png" alt="chatdittos" /></p>
+The first thing I want to note is that there appears to be a typo in the header. It lists the title as
+<div class="bordered">
+<figure>
+<img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatdittos.png" alt="chatdittos" /><figcaption>chatdittos</figcaption>
+</figure>
+</div>
 <p>In the above clip we also see mention of the mobile application which as far as I can tell has never existed.</p>
-<p>The website does not follow the <a href="https://gdpr-info.eu/">GDPR</a> and tells anyone who resides in the European Union that they are not allowed to use the Website/Platform. <img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatditnogdpr.png" alt="chatditnogdpr" /></p>
+The website does not follow the <a href="https://gdpr-info.eu/">GDPR</a> and tells anyone who resides in the European Union that they are not allowed to use the Website/Platform.
+<div class="bordered">
+<figure>
+<img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatditnogdpr.png" alt="chatditnogdpr" /><figcaption>chatditnogdpr</figcaption>
+</figure>
+</div>
 <p>Despite the reported purpose of the site to be “Build your Platform” the Terms of Service explicitly disallow the promotion of “third-party products, services, or brands”outside" of our ChatDit Platform"</p>
+<div class="bordered">
 <figure>
 <img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatdittosnoexternal.png" alt="chatdittosnoexternal" /><figcaption>chatdittosnoexternal</figcaption>
 </figure>
+</div>
 <p>Most of the TOS seems to be drawn from some boiler plate TOSs that you can find on other random websites across the web.</p>
 <p>As the reader may or may not know D&amp;S are primarily based in Fayetteville, NC. This includes their ChatDit LLC which was incorporated on 2/1/2019. Interestingly they registered a different LLC “Chit Chat Me” in late 2018. Not sure why they switched names and I don’t really see anything else out there about “Chit Chat Me” other than it being the name of their Live Show. It is unclear to me what the purpose of the Chit Chat Me LLC was.</p>
 <p>It doesn’t seem like there is a way to permalink to a NC business registration but the search system I used can be found <a href="https://www.sosnc.gov/online_services/search/by_title/_Business_Registration">here</a></p>
@@ -111,9 +123,24 @@ The notable exception to the all Diamond and Silk advertising on the site is a l
 <p>The first few “pages” created on the site appear to have been created by one or two people using the default placeholder Latin text “Lorem Ipsum”. One of the page creators lists Alkurn Technologies as his place of employment, a India based website development firm. His profile consists of almost all the information available to be entered in profile, most of it very much fitting the “testing” motif the pages this person has made as well. This obviously isn’t conclusive and I have briefly examined some the page source code looking for any information but did not see any clues.</p>
 <h2 id="site-technical-details">Site Technical Details</h2>
 <p>The rest of this article gets pretty into the weeds about the actual technical details of the site, including developers and technologies used (or misused). You’ve been warned!</p>
-<p>There are a few issues to note upon first login to the site. When you login the site POSTs your username and password in plain text but thankfully the site will only accept it over HTTPS. What this means in practice is that ChatDit servers have access to your password and email. There is no way to tell what they do on the back end with that information, ideally they would be hashing your password and storing that, but they could also be storing the passwords in plain text unencrypted as many many other sites do. <img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/postlogin.png" alt="postlogin" /></p>
-<p>Nearly every page loads comes with some kind of error message that pops up in the bottom right corner. Many appear to be error codes directly from the SQL interface which is a big no-no and indicates to me the possibility of SQL injection attack. I won’t comment on this further beyond saying don’t do anything illegal. <img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/sqlerror.png" alt="sqlerror" /></p>
-<p>In addition every page has a banner at the top of the page that tells you that you have to “hard” refresh (to clear the cache presumably?) the page to view the new updates. <img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/newupdates.png" alt="newupdates" /></p>
+<p>There are a few issues to note upon first login to the site. When you login the site POSTs your username and password in plain text but thankfully the site will only accept it over HTTPS. What this means in practice is that ChatDit servers have access to your password and email. There is no way to tell what they do on the back end with that information, ideally they would be hashing your password and storing that, but they could also be storing the passwords in plain text unencrypted as many many other sites do.</p>
+<div class="bordered">
+<figure>
+<img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/postlogin.png" alt="postlogin" /><figcaption>postlogin</figcaption>
+</figure>
+</div>
+<p>Nearly every page loads comes with some kind of error message that pops up in the bottom right corner. Many appear to be error codes directly from the SQL interface which is a big no-no and indicates to me the possibility of SQL injection attack. I won’t comment on this further beyond saying don’t do anything illegal.</p>
+<div class="bordered">
+<figure>
+<img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/sqlerror.png" alt="sqlerror" /><figcaption>sqlerror</figcaption>
+</figure>
+</div>
+<p>In addition every page has a banner at the top of the page that tells you that you have to “hard” refresh (to clear the cache presumably?) the page to view the new updates.</p>
+<div class="bordered">
+<figure>
+<img src="https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/newupdates.png" alt="newupdates" /><figcaption>newupdates</figcaption>
+</figure>
+</div>
 <p>At the bottom of each page there are two images supposedly linking to the iPhone and android app store respectively. Both of these images link you back to the main ChatDit.com page. As far as I can tell there is zero evidence of any app existing for ChatDit as of now. I did find one archived Github <a href="https://github.com/vivekkadu/ChatDit">ChatDit App Repo</a> with one commit in it titled “ChatDit”<sup><a href="#links"></a></sup> that had the starting files for both iPhone and Android apps, but no evidence other than the name that they are related.</p>
 <p>One truly revealing detail about the website is that the “#BetaTesting” tag has been trending every day that I have been on the website. However there seems to have been no change to the numbers of position of the tags since I have started tracking them.</p>
 <p>One item on the main page “Hided my post” appears that the site keeps track of the people who hide your post. Why? I’m not sure what benefit it serves to track who doesn’t like your content than to just sow the seeds of conflict and drama. Also horrendous grammar.</p>
@@ -121,8 +148,8 @@ The notable exception to the all Diamond and Silk advertising on the site is a l
 <p>The site itself appears to be built on the <a href="https://www.yiiframework.com/">“Yii2”</a> PHP framework, based upon some of the text displayed on the <a href="https://www.chatdit.com/404">ChatDit 404</a> error page.</p>
 <h1 id="tldr">TL;DR:</h1>
 <p>Diamond and Silk’s alternative social media website is a mess. Don’t waste your time like I have. It was truly a pain documenting this. Often nothing would load or take entire minutes to load.</p>
-<p>There are so many rabbit holes to fall down here, the AnalyzingAmerica relationship, they have a “tax-exempt” non-profit called <a href="https://sistasnp.com/">S.I.S.T.A.S.</a> that I haven’t been able to find in IRS public info (probably because of the name). The SISTAS page is also sponsored by Mike Lindell<sup><a href="#links"></a></sup>.</p>
-<p>Please follow me on <a href="https://twitter.com/qpdbor">twitter</a> for more deep dives into weird pockets of the Internet like this;</p>
+<p>There are so many rabbit holes to fall down here, the AnalyzingAmerica relationship, Diamond and Silk also have a “tax-exempt” non-profit called <a href="https://sistasnp.com/">S.I.S.T.A.S.</a> that I haven’t been able to find in IRS public info (probably because of the name). The SISTAS page is also sponsored by Mike Lindell but has not been updated for a while.</p>
+<p>Please follow me on <a href="https://twitter.com/qpdbor">twitter</a> for more deep dives into weird pockets of the Internet like this</p>
 <h3 id="links">Links</h3>
 <ol type="1">
 <li><a href="https://en.wikipedia.org/wiki/Diamond_and_Silk#Facebook">Diamond and Silk Wikipedia Page on Facebook</a></li>

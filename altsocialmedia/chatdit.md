@@ -6,7 +6,7 @@
 
 The tag line of the site is a overly long and very passive aggressive reference to their personal experience of deplatforming from social media; 
 
-<div class="center">
+<div class="center bordered">
 **"Build your Business, Keep your Business. Build your Platform as long as you are following the policies."**
 
 **"You have freedom of speech, not freedom to hate."**
@@ -47,16 +47,22 @@ The Diamond and Silk group was the largest that I came across plugging in terms 
 The ChatDit Terms of Service lays out a number of interesting points about the website.
 
 The first thing I want to note is that there appears to be a typo in the header. It lists the title as 
+<div class="bordered">
 ![chatdittos](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatdittos.png)
+</div>
 
 In the above clip we also see mention of the mobile application which as far as I can tell has never existed.
 
 The website does not follow the [GDPR](https://gdpr-info.eu/) and tells anyone who resides in the European Union that they are not allowed to use the Website/Platform.
+<div class="bordered">
 ![chatditnogdpr](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatditnogdpr.png)
+</div>
 
 Despite the reported purpose of the site to be "Build your Platform" the Terms of Service explicitly disallow the promotion of "third-party products, services, or brands "outside" of our ChatDit Platform"
 
+<div class="bordered">
 ![chatdittosnoexternal](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/chatdittosnoexternal.png)
+</div>
 
 Most of the TOS seems to be drawn from some boiler plate TOSs that you can find on other random websites across the web.
 
@@ -127,13 +133,22 @@ The first few "pages" created on the site appear to have been created by one  or
 The rest of this article gets pretty into the weeds about the actual technical details of the site, including developers and technologies used (or misused). You've been warned!
 
 There are a few issues to note upon first login to the site. When you login the site POSTs your username and password in plain text but thankfully the site will only accept it over HTTPS. What this means in practice is that ChatDit servers have access to your password and email. There is no way to tell what they do on the back end with that information, ideally they would be hashing your password and storing that, but they could also be storing the passwords in plain text unencrypted as many many other sites do.
+
+<div class="bordered">
 ![postlogin](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/postlogin.png)
+</div>
 
 Nearly every page loads comes with some kind of error message that pops up in the bottom right corner. Many appear to be error codes directly from the SQL interface which is a big no-no and indicates to me the possibility of SQL injection attack. I won't comment on this further beyond saying don't do anything illegal.
+
+<div class="bordered">
 ![sqlerror](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/sqlerror.png)
+</div>
 
 In addition every page has a banner at the top of the page that tells you that you have to "hard" refresh (to clear the cache presumably?) the page to view the new updates.
+
+<div class="bordered">
 ![newupdates](https://github.com/sebastiansam55/sebastiansam55.github.io/raw/master/altsocialmedia/assets/newupdates.png)
+</div>
 
 At the bottom of each page there are two images supposedly linking to the iPhone and android app store respectively. Both of these images link you back to the main ChatDit.com page. As far as I can tell there is zero evidence of any app existing for ChatDit as of now. I did find one archived Github [ChatDit App Repo](https://github.com/vivekkadu/ChatDit) with one commit in it titled "ChatDit"<sup>[](#links)</sup> that had the starting files for both iPhone and Android apps, but no evidence other than the name that they are related.
 
@@ -149,9 +164,9 @@ The site itself appears to be built on the ["Yii2"](https://www.yiiframework.com
 
 Diamond and Silk's alternative social media website is a mess. Don't waste your time like I have. It was truly a pain documenting this. Often nothing would load or take entire minutes to load. 
 
-There are so many rabbit holes to fall down here, the AnalyzingAmerica relationship, they have a "tax-exempt" non-profit called [S.I.S.T.A.S.](https://sistasnp.com/) that I haven't been able to find in IRS public info (probably because of the name). The SISTAS page is also sponsored by Mike Lindell.
+There are so many rabbit holes to fall down here, the AnalyzingAmerica relationship, Diamond and Silk also have a "tax-exempt" non-profit called [S.I.S.T.A.S.](https://sistasnp.com/) that I haven't been able to find in IRS public info (probably because of the name). The SISTAS page is also sponsored by Mike Lindell but has not been updated for a while.
 
-Please follow me on [twitter](https://twitter.com/qpdbor) for more deep dives into weird pockets of the Internet like this; 
+Please follow me on [twitter](https://twitter.com/qpdbor) for more deep dives into weird pockets of the Internet like this
 
 
 ### Links

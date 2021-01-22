@@ -331,3 +331,6 @@ table td {
   text-align:center;
 }
 
+.bordered{
+  border: solid;
+}
