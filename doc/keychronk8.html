@@ -169,38 +169,202 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p>The Keyboard input devices handle all of the regular key events, and the Function inputs handle the “Functions” like the screen brightness, media control, volume control etc.</p>
 <h2 id="function-keys">Function Keys</h2>
-<p>On the Windows layout (pressing <code>FN+F[1-12]</code>): &lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream =======</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>Stashed changes | Key | Key Signal | Scan Code | Device | Purpose | | :-: | :——–: | :——-: | :—-: | :—–: | | <code>FN+F1</code> | <code>KEY_BRIGHTNESSDOWN</code> | <code>224</code> | Function input | Screen brightness | | <code>FN+F2</code> | <code>KEY_BRIGHTNESSUP</code> | <code>225</code> | Function input | Screen brightness | | <code>FN+F3</code> | <code>KEY_LEFTMETA+KEY_TAB</code> | <code>125+15</code> | Keyboard input | Switch windows | | <code>FN+F4</code> | <code>KEY_LEFTMETA+KEY_DOT</code> | <code>125+52</code> | Keyboard input | ? | | <code>FN+F5</code> | None | None | None | Decrease keyboard brightness | | <code>FN+F6</code> | None | None | None | Increase keyboard brightness | | <code>FN+F7</code> | <code>KEY_PREVIOUSSONG</code> | <code>165</code> | Function input | Media key | | <code>FN+F8</code> | <code>KEY_PLAYPAUSE</code> | <code>164</code> | Function input | Media key | | <code>FN+F9</code> | <code>KEY_NEXTSONG</code> | <code>163</code> | Function input | Media key | | <code>FN+F10</code> | <code>KEY_MUTE</code> | <code>113</code> | Function input | Volume control | | <code>FN+F11</code> | <code>KEY_VOLUMEDOWN</code> | <code>114</code> | Function input | Volume control | | <code>FN+F12</code> | <code>KEY_VOLUMEUP</code> | <code>115</code> | Function input | Volume control |</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>On the MacOS layout (pressing <code>FN+F[1-12]</code>): &lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream =======</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>Stashed changes | Key | Key Signal | Scan Code | Device | Purpose | | :-: | :——–: | :——-: | :—-: | :—–: | | <code>FN+F1</code> | <code>KEY_BRIGHTNESSDOWN</code> | <code>224</code> | Keyboard input | Screen brightness | | <code>FN+F2</code> | <code>KEY_BRIGHTNESSUP</code> | <code>225</code> | Keyboard input | Screen brightness | | <code>FN+F3</code> | <code>KEY_SCALE</code> | <code>120</code> | Keyboard input | Switch windows | | <code>FN+F4</code> | <code>KEY_DASHBOARD</code> | <code>204</code> | Keyboard input | ? | | <code>FN+F5</code> | None | None | None | Decrease keyboard brightness | | <code>FN+F6</code> | None | None | None | Increase keyboard brightness | | <code>FN+F7</code> | <code>KEY_PREVIOUSSONG</code> | <code>165</code> | Keyboard input | Media key | | <code>FN+F8</code> | <code>KEY_PLAYPAUSE</code> | <code>164</code> | Keyboard input | Media key | | <code>FN+F9</code> | <code>KEY_NEXTSONG</code> | <code>163</code> | Keyboard input | Media key | | <code>FN+F10</code> | <code>KEY_MUTE</code> | <code>113</code> | Keyboard input | Volume control | | <code>FN+F11</code> | <code>KEY_VOLUMEDOWN</code> | <code>114</code> | Keyboard input | Volume control | | <code>FN+F12</code> | <code>KEY_VOLUMEUP</code> | <code>115</code> | Keyboard input | Volume control |</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p>On the Windows layout (pressing <code>FN+F[1-12]</code>):</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Key</th>
+<th style="text-align: center;">Key Signal</th>
+<th style="text-align: center;">Scan Code</th>
+<th style="text-align: center;">Device</th>
+<th style="text-align: center;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F1</code></td>
+<td style="text-align: center;"><code>KEY_BRIGHTNESSDOWN</code></td>
+<td style="text-align: center;"><code>224</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Screen brightness</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F2</code></td>
+<td style="text-align: center;"><code>KEY_BRIGHTNESSUP</code></td>
+<td style="text-align: center;"><code>225</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Screen brightness</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F3</code></td>
+<td style="text-align: center;"><code>KEY_LEFTMETA+KEY_TAB</code></td>
+<td style="text-align: center;"><code>125+15</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Switch windows</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F4</code></td>
+<td style="text-align: center;"><code>KEY_LEFTMETA+KEY_DOT</code></td>
+<td style="text-align: center;"><code>125+52</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F5</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Decrease keyboard brightness</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F6</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Increase keyboard brightness</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F7</code></td>
+<td style="text-align: center;"><code>KEY_PREVIOUSSONG</code></td>
+<td style="text-align: center;"><code>165</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Media key</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F8</code></td>
+<td style="text-align: center;"><code>KEY_PLAYPAUSE</code></td>
+<td style="text-align: center;"><code>164</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Media key</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F9</code></td>
+<td style="text-align: center;"><code>KEY_NEXTSONG</code></td>
+<td style="text-align: center;"><code>163</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Media key</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F10</code></td>
+<td style="text-align: center;"><code>KEY_MUTE</code></td>
+<td style="text-align: center;"><code>113</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Volume control</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F11</code></td>
+<td style="text-align: center;"><code>KEY_VOLUMEDOWN</code></td>
+<td style="text-align: center;"><code>114</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Volume control</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F12</code></td>
+<td style="text-align: center;"><code>KEY_VOLUMEUP</code></td>
+<td style="text-align: center;"><code>115</code></td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;">Volume control</td>
+</tr>
+</tbody>
+</table>
+<p>On the MacOS layout (pressing <code>FN+F[1-12]</code>):</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Key</th>
+<th style="text-align: center;">Key Signal</th>
+<th style="text-align: center;">Scan Code</th>
+<th style="text-align: center;">Device</th>
+<th style="text-align: center;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F1</code></td>
+<td style="text-align: center;"><code>KEY_BRIGHTNESSDOWN</code></td>
+<td style="text-align: center;"><code>224</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Screen brightness</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F2</code></td>
+<td style="text-align: center;"><code>KEY_BRIGHTNESSUP</code></td>
+<td style="text-align: center;"><code>225</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Screen brightness</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F3</code></td>
+<td style="text-align: center;"><code>KEY_SCALE</code></td>
+<td style="text-align: center;"><code>120</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Switch windows</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F4</code></td>
+<td style="text-align: center;"><code>KEY_DASHBOARD</code></td>
+<td style="text-align: center;"><code>204</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F5</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Decrease keyboard brightness</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F6</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Increase keyboard brightness</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F7</code></td>
+<td style="text-align: center;"><code>KEY_PREVIOUSSONG</code></td>
+<td style="text-align: center;"><code>165</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Media key</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F8</code></td>
+<td style="text-align: center;"><code>KEY_PLAYPAUSE</code></td>
+<td style="text-align: center;"><code>164</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Media key</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F9</code></td>
+<td style="text-align: center;"><code>KEY_NEXTSONG</code></td>
+<td style="text-align: center;"><code>163</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Media key</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F10</code></td>
+<td style="text-align: center;"><code>KEY_MUTE</code></td>
+<td style="text-align: center;"><code>113</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Volume control</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>FN+F11</code></td>
+<td style="text-align: center;"><code>KEY_VOLUMEDOWN</code></td>
+<td style="text-align: center;"><code>114</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Volume control</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>FN+F12</code></td>
+<td style="text-align: center;"><code>KEY_VOLUMEUP</code></td>
+<td style="text-align: center;"><code>115</code></td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;">Volume control</td>
+</tr>
+</tbody>
+</table>
 <h2 id="leds">LEDS</h2>
 <p>On the keyboard, not counting the RGB backlight. There are three LEDS above the arrow cluster on the right hand size. - Power LED - Bluetooth LED - CAPS_LOCK LED</p>
 <p>When these LEDs are activated is self evident.</p>
