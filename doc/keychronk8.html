@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>keychron k8</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://samuelsebastian.dev/pandoc.css" />
+</head>
+<body>
+<h1 id="keychron-k8-keyboard-on-linux">Keychron K8 Keyboard on Linux</h1>
+<h2 id="intro-and-first-config">Intro and first Config</h2>
+<p>First thing make sure the <code>USB-C</code> plug is pushed all of the way in, I had to push relatively hard for the keyboard to be connected correctly to my computer.</p>
+<p>This is a pretty reliable source and the solutions appear to be more or less completely applicable to the <code>K8</code> at the least.</p>
+<p><a href="https://github.com/Kurgol/keychron/blob/master/k2.md">Keychron K2 config on github</a></p>
+<p>From the above link I used the alternative solution under <code>udev</code>;</p>
+<p>Having the keyboard in the MacOS mode I executed: <code>sudo touch /etc/modprobe.d/hid_apple.conf</code> Open the file in your editor of choice (<code>sudo nano</code>) and add <code>options hid_apple fnmode=2</code> and write the changes.</p>
+<p>Execute <code>sudo update-initramfs -u</code> and reboot the computer.</p>
+<p>Make sure to switch the selector switch on the side of the keyboard to <code>Windows/Android</code> and everything works as expected for me. <code>F[1-12]</code> activate as expected and pressing <code>FN+F1</code> etc activate the functions related.</p>
+<p>I would very much recommend that you upgrade to some thicker PBT key caps as the ones that ship with the <code>K8</code> are exceptionally grating to listen to. To my ear they make a really high pitch sort of ringing that borders on unbearable. I also have o-rings on my new key caps which help but I don’t think are as necessary as PBT/thicker key caps.</p>
+<h2 id="keys">Keys</h2>
+<p>Being a TKL layout the <code>K8</code> has most if not all of the keys that I regularly use with some notable, annoyingly unnecessary exceptions.</p>
+<h3 id="the-scroll-lock-key">The Scroll Lock key</h3>
+<p>The scroll lock key does not send the scroll lock key. Instead it sends “<code>&lt;LEFT_META&gt;+j</code>” (KC:<code>125+36</code>) on the “<code>Windows</code>” layout or “<code>SPACE+FN</code>” (KC:<code>57+464</code>) on the MacOS layout which are supposedly the key combinations used to activate Cortana and Siri.</p>
+<p>This seems like a complete waste of the key. Do I use scroll lock for scroll lock? Absolutely not. I use it as a toggle mute in voice chat application so I can look at my keyboard and see at a glance what the state of my microphone is (at least I could do this on keyboards that have a scroll lock indicator light). But now on my keyboard it is an unused and unloved key.</p>
+<h3 id="the-pausebreak-key">The pause/break key</h3>
+<p>Right (on the left) next to it is where the “Pause” key usually resides. Not so on the <code>K8</code> instead is the <code>K8</code> lighting control. This key does not send any signals to the computer at all from my examination of the device.</p>
+<p>Do I use the key as a pause/break key? Also no but it was a convenient key to bind as a shortcut for various other programs because it was essentially a “free” key.</p>
+<p>The use of this key as the light key is particularly annoying as there is not a way to disable it. Meaning any time that it is bumped you will have to cycle through all 16 different lighting modes to arrive back at your desired one.</p>
+<h3 id="the-fn-key.">The <code>Fn</code> key.</h3>
+<p>The <code>Fn</code> key operates very differently between the two layouts.</p>
+<ul>
+<li>Windows layout
+<ul>
+<li>On this layout the key does not send any events at all. In the <a href="https://www.keychron.com/pages/k8-keyboard-user-manual">manual</a> there is an option to switch to a more <code>MacOS</code> type functionality where pressing the <code>F[1-12]</code> keys sends the signals like keyboard backlight before the <code>F[1-12]</code> signals.</li>
+<li>No matter what the <code>Fn</code> key functionality is it does not send any signals to the computer on the Windows layout. The <code>F[1-12]</code> switching takes place entirely within the keyboard firmware.</li>
+</ul></li>
+<li>MacOS layout
+<ul>
+<li>On this layout the <code>Fn</code> key sends the <code>KEY_FN</code> or <code>464</code> scan code.</li>
+<li>It will not send anything if you press <code>Fn+[1-3]</code> because this is bound to switching bluetooth devices. This is despite the keyboard being connected via a wired connection (making the <code>Fn+[1-3]</code> hotkeys useless)</li>
+<li>Note that any other key combinations as described in the <code>K8</code> <a href="https://cdn.shopify.com/s/files/1/0059/0630/1017/files/K8_QSD-1.jpg?v=1596771405">quick start</a> will also not send key strokes when combined with the <code>FN</code> key
+<ul>
+<li>This list includes; <code>S O X L 1 2 3</code></li>
+<li>I find this list of caveats to the function of the <code>FN</code> key to be so arbitrary to make it useless as other wise I would have to remember all of these when adding the <code>FN</code> to a hotkey.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="devices-added">Devices added</h2>
+<p>Many keyboards add more than one device to <code>/dev/input</code>, the <code>K8</code> adds two devices when connected via wired and adds three devices when connected via bluetooth.</p>
+<p>It is unclear what the 3rd device added when the keyboard is connected via bluetooth does. I have not been able to see any events sent by it during regular usage. I suspect that it is related to the bluetooth sleep functions as the listed capabilities as reported by <code>evtest</code> are as follows;</p>
+<pre><code>Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 142 (KEY_SLEEP)
+  Event type 4 (EV_MSC)
+    Event code 4 (MSC_SCAN)</code></pre>
+<h2 id="device-names">Device Names</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Physical Address</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Wired</td>
+<td style="text-align: center;">Keychron K8 Keychron K8</td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;"><code>usb-0000:00:14.0-1.3/input0</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Wired</td>
+<td style="text-align: center;">Keychron K8 Keychron K8</td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;"><code>usb-0000:00:14.0-1.3/input1</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Bluetooth</td>
+<td style="text-align: center;">Keychron K8 Keyboard</td>
+<td style="text-align: center;">Keyboard input</td>
+<td style="text-align: center;"><code>b8:76:3f:ac:2c:05</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Bluetooth</td>
+<td style="text-align: center;">Keychron K8 System Control</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;"><code>b8:76:3f:ac:2c:05</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Bluetooth</td>
+<td style="text-align: center;">Keychron K8 Consumer Control</td>
+<td style="text-align: center;">Function input</td>
+<td style="text-align: center;"><code>b8:76:3f:ac:2c:05</code></td>
+</tr>
+</tbody>
+</table>
+<p>The Keyboard input devices handle all of the regular key events, and the Function inputs handle the “Functions” like the screen brightness, media control, volume control etc.</p>
+<h2 id="function-keys">Function Keys</h2>
+<p>On the Windows layout (pressing <code>FN+F[1-12]</code>): &lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream =======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Stashed changes | Key | Key Signal | Scan Code | Device | Purpose | | :-: | :——–: | :——-: | :—-: | :—–: | | <code>FN+F1</code> | <code>KEY_BRIGHTNESSDOWN</code> | <code>224</code> | Function input | Screen brightness | | <code>FN+F2</code> | <code>KEY_BRIGHTNESSUP</code> | <code>225</code> | Function input | Screen brightness | | <code>FN+F3</code> | <code>KEY_LEFTMETA+KEY_TAB</code> | <code>125+15</code> | Keyboard input | Switch windows | | <code>FN+F4</code> | <code>KEY_LEFTMETA+KEY_DOT</code> | <code>125+52</code> | Keyboard input | ? | | <code>FN+F5</code> | None | None | None | Decrease keyboard brightness | | <code>FN+F6</code> | None | None | None | Increase keyboard brightness | | <code>FN+F7</code> | <code>KEY_PREVIOUSSONG</code> | <code>165</code> | Function input | Media key | | <code>FN+F8</code> | <code>KEY_PLAYPAUSE</code> | <code>164</code> | Function input | Media key | | <code>FN+F9</code> | <code>KEY_NEXTSONG</code> | <code>163</code> | Function input | Media key | | <code>FN+F10</code> | <code>KEY_MUTE</code> | <code>113</code> | Function input | Volume control | | <code>FN+F11</code> | <code>KEY_VOLUMEDOWN</code> | <code>114</code> | Function input | Volume control | | <code>FN+F12</code> | <code>KEY_VOLUMEUP</code> | <code>115</code> | Function input | Volume control |</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>On the MacOS layout (pressing <code>FN+F[1-12]</code>): &lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream =======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Stashed changes | Key | Key Signal | Scan Code | Device | Purpose | | :-: | :——–: | :——-: | :—-: | :—–: | | <code>FN+F1</code> | <code>KEY_BRIGHTNESSDOWN</code> | <code>224</code> | Keyboard input | Screen brightness | | <code>FN+F2</code> | <code>KEY_BRIGHTNESSUP</code> | <code>225</code> | Keyboard input | Screen brightness | | <code>FN+F3</code> | <code>KEY_SCALE</code> | <code>120</code> | Keyboard input | Switch windows | | <code>FN+F4</code> | <code>KEY_DASHBOARD</code> | <code>204</code> | Keyboard input | ? | | <code>FN+F5</code> | None | None | None | Decrease keyboard brightness | | <code>FN+F6</code> | None | None | None | Increase keyboard brightness | | <code>FN+F7</code> | <code>KEY_PREVIOUSSONG</code> | <code>165</code> | Keyboard input | Media key | | <code>FN+F8</code> | <code>KEY_PLAYPAUSE</code> | <code>164</code> | Keyboard input | Media key | | <code>FN+F9</code> | <code>KEY_NEXTSONG</code> | <code>163</code> | Keyboard input | Media key | | <code>FN+F10</code> | <code>KEY_MUTE</code> | <code>113</code> | Keyboard input | Volume control | | <code>FN+F11</code> | <code>KEY_VOLUMEDOWN</code> | <code>114</code> | Keyboard input | Volume control | | <code>FN+F12</code> | <code>KEY_VOLUMEUP</code> | <code>115</code> | Keyboard input | Volume control |</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="leds">LEDS</h2>
+<p>On the keyboard, not counting the RGB backlight. There are three LEDS above the arrow cluster on the right hand size. - Power LED - Bluetooth LED - CAPS_LOCK LED</p>
+<p>When these LEDs are activated is self evident.</p>
+<p>However, according to <code>evtest</code> the keyboard has the following LED events.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1">  <span class="ex">Event</span> type 17 (EV_LED)</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="ex">Event</span> code 0 (LED_NUML) <span class="ex">state</span> 0</a>
+<a class="sourceLine" id="cb2-3" title="3">    <span class="ex">Event</span> code 1 (LED_CAPSL) <span class="ex">state</span> 0</a>
+<a class="sourceLine" id="cb2-4" title="4">    <span class="ex">Event</span> code 2 (LED_SCROLLL) <span class="ex">state</span> 0</a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="ex">Event</span> code 3 (LED_COMPOSE) <span class="ex">state</span> 1</a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="ex">Event</span> code 4 (LED_KANA) <span class="ex">state</span> 0</a></code></pre></div>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream Out of these only LED_CAPSL appears to effect the physical LEDs on the keyboard. ======= Out of these only <code>LED_CAPSL</code> appears to effect the physical LEDs on the keyboard. &gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
+<h2 id="notes">Notes</h2>
+<p>All key/scan codes are those as reported by <code>evtest</code>, mostly on the wired connection unless otherwise specified.</p>
+<p>Note that when a key is mentioned it is described by it’s qwerty layout value. If you map your keyboard to a different layout the location of these hot keys does not move. IE: if you use dvorak which moves the location of many of the keys the shortcut for toggling Auto Sleep Mode <code>FN+S+O</code> will be <code>FN+O+R</code> on a dvorak keyboard, with the S-&gt;O and O-&gt;R.</p>
+</body>
+</html>
