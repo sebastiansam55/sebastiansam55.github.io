@@ -375,7 +375,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb2-4" title="4">    <span class="ex">Event</span> code 2 (LED_SCROLLL) <span class="ex">state</span> 0</a>
 <a class="sourceLine" id="cb2-5" title="5">    <span class="ex">Event</span> code 3 (LED_COMPOSE) <span class="ex">state</span> 1</a>
 <a class="sourceLine" id="cb2-6" title="6">    <span class="ex">Event</span> code 4 (LED_KANA) <span class="ex">state</span> 0</a></code></pre></div>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream Out of these only LED_CAPSL appears to effect the physical LEDs on the keyboard. ======= Out of these only <code>LED_CAPSL</code> appears to effect the physical LEDs on the keyboard. &gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
+<p>Out of these only <code>LED_CAPSL</code> appears to effect the physical LEDs on the keyboard.</p>
+<h2 id="battery-info">Battery info</h2>
+<p>According to the <a href="https://www.facebook.com/groups/Keychronlinux/permalink/799098330818037">Keychron Linux User Group</a> Keychron keyboards do not properly report battery status on Linux. This carries over to android devices where it also does not report battery percentage left, unlike many other Bluetooth devices.</p>
+<h2 id="bluetooth-info">Bluetooth info</h2>
+<h2 id="altgr">AltGR</h2>
 <h2 id="notes">Notes</h2>
 <p>All key/scan codes are those as reported by <code>evtest</code>, mostly on the wired connection unless otherwise specified.</p>
 <p>Note that when a key is mentioned it is described by it’s qwerty layout value. If you map your keyboard to a different layout the location of these hot keys does not move. IE: if you use dvorak which moves the location of many of the keys the shortcut for toggling Auto Sleep Mode <code>FN+S+O</code> will be <code>FN+O+R</code> on a dvorak keyboard, with the S-&gt;O and O-&gt;R.</p>
