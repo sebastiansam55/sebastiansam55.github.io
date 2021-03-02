@@ -1,7 +1,3 @@
-/*
- * I add this to html files generated with pandoc.
- */
-
 html {
   font-size: 100%;
   overflow-y: scroll;
@@ -67,12 +63,14 @@ p {
 
 img {
   max-width: 100%;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #111;
   line-height: 125%;
-  margin-top: 2em;
   font-weight: normal;
 }
 
@@ -201,7 +199,6 @@ dd:last-child {
 }
 
 img {
-  border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
 }
@@ -305,10 +302,6 @@ table td {
     page-break-inside: avoid;
   }
 
-  img {
-    max-width: 100% !important;
-  }
-
   @page :left {
     margin: 15mm 20mm 15mm 10mm;
 }
@@ -333,4 +326,42 @@ table td {
 
 .bordered{
   border: solid;
+}
+
+.sidebyside {
+    width: 50%;
+    margin-left:10px;
+    margin-right:10px;
+}
+.container {
+    display: flex;
+}
+
+
+#title-block-header {
+    display: none;
+}
+
+.pfp {
+  float: right;
+  width:100px;
+  height:100px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.footer p{
+  margin-top: 5px;
+}
+
+.padding {
+  height:50px;
 }
