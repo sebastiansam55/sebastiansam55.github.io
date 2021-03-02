@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+    "build_systems":[
+        {
+            "name": "Markdown build",
+            "selector": "*.md",
+            "shell": true,
+            "cmd": ["/home/sam/Dropbox/bin/grephtml $file | pandoc -s --css='pandoc.css' --to=html5 -o $file_base_name.html; mimeopen $file_base_name.html"]
+        }
+
+    ]
+}
