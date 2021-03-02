@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sam Sebastian" />
+  <title>Samuel Sebastian</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://samuelsebastian.dev/pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Samuel Sebastian</h1>
+<p class="author">Sam Sebastian</p>
+</header>
+<div class="container">
+<section id="samuel-sebastian" class="sidebyside">
+<h1>Samuel Sebastian</h1>
+</section>
+<div class="sidebyside">
+<div class="pfp">
+<p><a href="https://github.com/sebastiansam55"> <img src="https://samuelsebastian.dev/assets/pfp.png" /> </a></p>
+</div>
+</div>
+</div>
+<h2 id="hire-me">Hire me!</h2>
+<p>You can check out my official resume <a href="https://samuelsebastian.dev/assets/samuel_sebastian_resume.pdf">here</a>. Examples of my work are also provided below. Email me <a href="mailto:sebastiansam55@gmail.com">here</a></p>
+<h2 id="recipes"><a href="https://githubrecipes.com/">Recipes</a></h2>
+<p>A bare bones no frills recipe hosting website focused on user submissions through the github platform. Uses <code>python</code> for basic templating, <code>pandoc</code> for markdown-&gt;html translation.</p>
+<p>Leverages github actions as a build system and github pages to host website files nearly entirely within github.</p>
+<h2 id="uinput">UInput</h2>
+<p><code>UInput</code> is a Linux kernel module that easily allows low level access to input devices on Linux based systems. The possibilities are endless! Here are a few of the projects that I have published using the <code>python-evdev</code> library (among others)</p>
+<table>
+<tr>
+<td>
+<h3 id="uinput-kvm"><a href="https://github.com/sebastiansam55/uinput-kvm"><code>uinput-kvm</code></a></h3>
+<p>“KVM” is in quotes. The main idea of this project is to allow sending low level signals between Linux computers. This expanded to crossplatform support for recieveing the sent signals. Meaning that you can have 1 keyboard and mouse “connected” (connections work over local network websockets) to any number of different computers.</p>
+<h3 id="uinput-keyboard-mapper"><a href="https://github.com/sebastiansam55/uinput-keyboard-mapper"><code>uinput-keyboard-mapper</code></a></h3>
+<p>A script that will grab all of the signals a keyboard device sends and map them to a different layout (eg <a href="https://en.wikipedia.org/wiki/QWERTY">qwerty</a> to <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">dvorak</a>). It supports toggling the remap along with adding a “embedded” numberpad like those sometimes seen on smaller form factor laptops.</p>
+<p>The layouts outside of this qwerty to dvorak are limited because I personally prefer the dvorak layout. This project has recently taken a back seat as I have managed to get <a href="https://qmk.fm/">QMK</a> on my current keyboard.</p>
+</td>
+<td>
+<h3 id="uinput-macropad"><a href="https://github.com/sebastiansam55/uinput-macropad"><code>uinput-macropad</code></a></h3>
+<p>Based on parts of both <code>uinput-kvm</code> and <code>uinput-keyboard-mapper</code>. Allows the creation of “streamdeck”-like secondary keyboards. Basically grabs a keyboard (or any other device) and maps the events it emits to different things, like keyboard output or running a script. So the limit of it’s capabilities are your technical ability, python and your imagination! Examples provided!</p>
+<h3 id="stadia-bluetooth"><a href="https://github.com/sebastiansam55/stadia-bluetooth"><code>stadia-bluetooth</code></a></h3>
+<p>Uses a number of different technologies to enable the Stadia controller to be used “wirelessly”. Currently only supports use on computers running Linux.</p>
+</td>
+</tr>
+</table>
+<h2 id="data-analysis">Data Analysis</h2>
+<h3 id="isp-tracking"><a href="https://github.com/sebastiansam55/isp-tracking"><code>ISP-tracking</code></a></h3>
+<p>A script tracking upload and download speeds along with documentation about how to generate useful graphs of how your Internet has been performing compared to what you are paying for.</p>
+<h2 id="other">Other</h2>
+<h3 id="greptools"><a href="https://github.com/sebastiansam55/greptools"><code>greptools</code></a></h3>
+<p>A quick and dirty tool for replacing strings in files. Used on this website for footers, headers and more!</p>
+<h3 id="templates"><a href="https://github.com/sebastiansam55/templates"><code>templates</code></a></h3>
+<p>A small (but ever growing) collection of useful templates for different <code>python</code> modules and the sublime text editor, among others.</p>
+<div class="padding">
+
+</div>
+<div class="footer">
+<p><a href="mailto:sebastiansam55@gmail.com">Contact</a> | <a href="https://samuelsebastian.dev/info/githubpages.html">How this page was made</a> | <a href="">Resume</a></p>
+</div>
+</body>
+</html>
